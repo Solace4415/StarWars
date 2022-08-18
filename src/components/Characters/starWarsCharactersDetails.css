@@ -1,0 +1,164 @@
+.characters {
+  height: auto;
+  width: 100%;
+  padding: 2%;
+  background-color: #121212;
+  background-color: black;
+}
+
+.characters h1 {
+  color: rgb(223, 223, 163);
+  margin: 10px 0;
+  text-align: center;
+}
+
+.characters-crawler {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+.characters-crawler p {
+  font-size: 18px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: rgb(223, 223, 163);
+  line-height: 50px;
+  text-align: center;
+
+  /* Starting position */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+
+  /* Apply animation to this element */
+  -moz-animation: characters-crawler 15s linear infinite;
+  -webkit-animation: characters-crawler15s linear infinite;
+  animation: characters-crawler 15s linear infinite;
+}
+
+/* Move it (define the animation) */
+@-moz-keyframes characters-crawler {
+  0% {
+    -moz-transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes characters-crawler {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+@keyframes characters-crawler {
+  0% {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+.selection {
+  height: auto;
+  margin-bottom: 30px;
+  width: 100%;
+  background-color: black;
+  border-style: solid;
+  border-color: transparent;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.selection button {
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+  border: none;
+  transition-property: all;
+  transition-timing-function: linear;
+  transition-duration: 0.3s;
+}
+
+.selected {
+  background-color: yellow;
+  color: black;
+}
+
+.non_selected {
+  background-color: black;
+  color: yellow;
+}
+
+.characters-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+table {
+  width: 70%;
+  height: auto;
+  color: rgb(223, 223, 163);
+  border: solid 2px yellow;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #121212;
+  cursor: pointer;
+}
+
+tr:nth-child(even) {
+  background-color: #121212;
+}
+
+th {
+  padding: 15px;
+  text-align: center;
+}
+
+td {
+  padding: 15px;
+  text-align: center;
+}
+
+@media screen and (max-width: 990px) {
+  table {
+    width: 85%;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .characters {
+    max-width: 100%;
+  }
+
+  .characters marquee {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+
+  table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  tr:nth-child(even) {
+    max-width: 100% !important;
+  }
+}

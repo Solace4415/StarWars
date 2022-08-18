@@ -1,0 +1,91 @@
+.starwar {
+  min-height: 100vh;
+  width: 100%;
+  background-color: black;
+  position: relative;
+}
+
+.starwar img {
+  height: 85vh;
+  width: 100%;
+}
+
+.starwar-btn {
+  width: 100%;
+  height: auto;
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.starwar-drpbtn {
+  height: 40px;
+  width: fit-content;
+  padding: 1%;
+  border: none;
+  border-radius: 4px;
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 10px;
+  cursor: pointer;
+}
+
+.starwar-btn:active {
+  opacity: 0;
+}
+
+.starwar-drpdownContent {
+  height: auto;
+  padding: 2% 5%;
+  width: fit-content;
+  min-width: 40%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  row-gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.starwar-content {
+  height: auto;
+  width: fit-content;
+  color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  background-color: #121212;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  transition-property: all;
+  transition-timing-function: linear;
+  transition-duration: 0.5s;
+  font-size: 14px;
+}
+
+.starwar-content:hover {
+  font-weight: bold;
+  color: #121212;
+  background-color: yellow;
+}
+@media screen and (max-width: 640px) {
+  .starwar {
+    min-height: unset;
+  }
+
+  .starwar img {
+    height: 60vh;
+    width: 100%;
+  }
+
+  .starwar-drpdownContent {
+    min-width: 80%;
+  }
+}
