@@ -52,8 +52,7 @@ const StarWarsCharactersDetails = ({ movieSelected, sortedFilms }) => {
     if (direction === "ascending") {
       let sortedCharacter = characters_context;
       setCharacters([]);
-      let newCharacters;
-      newCharacters = sortedCharacter.sort((a, b) =>
+      const newCharacters = sortedCharacter.sort((a, b) =>
         a.name > b.name ? 1 : -1
       );
       setCharacters(newCharacters);
@@ -61,8 +60,7 @@ const StarWarsCharactersDetails = ({ movieSelected, sortedFilms }) => {
     } else if (direction === "descending") {
       let sortedCharacters = characters_context;
       setCharacters([]);
-      let newCharacters;
-      newCharacters = sortedCharacters
+      const newCharacters = sortedCharacters
         .sort((a, b) => (a.name > b.name ? 1 : -1))
         .reverse();
       setCharacters(newCharacters);
