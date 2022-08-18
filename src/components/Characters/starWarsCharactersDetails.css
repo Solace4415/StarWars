@@ -121,6 +121,11 @@ thead {
   cursor: pointer;
 }
 
+thead tr:hover{
+  background: yellow;
+  color: black;
+}
+
 tr:nth-child(even) {
   background-color: #121212;
 }
